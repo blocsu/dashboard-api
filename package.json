@@ -12,9 +12,11 @@
 	"author": "Pengineer",
 	"license": "ISC",
 	"dependencies": {
-		"express": "^4.17.1"
+		"express": "^4.17.1",
+		"tslog": "^3.2.2"
 	},
 	"devDependencies": {
-		"@types/express": "^4.17.13"
+		"@types/express": "^4.17.13",
+		"typescript": "^5.7.2"
 	}
 }
