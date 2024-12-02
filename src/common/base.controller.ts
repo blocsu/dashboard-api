@@ -1,6 +1,6 @@
 import { Response, Router } from 'express';
 import { LoggerService } from '../logger/logger.service';
-import { IControllerRouter } from './router.interface';
+import { IControllerRoute } from './route.interface';
 
 export abstract class BaseController {
 	private readonly _router: Router;
@@ -18,15 +18,15 @@ export abstract class BaseController {
 		return res.status(code).json(message);
 	}
 
-	public ok<T>(res: Response, code: number, message: T) {
-		return this.send(res, 200, message);
+	public ok<T>(res: Response, message: T) {
+		return this.send<T>(res, 200, message);
 	}
 
 	public created(res: Response) {
 		return res.sendStatus(201);
 	}
 
-	protected bindRouter(routes: IControllerRouter[]) {
+	protected bindRoutes(routes: IControllerRoute[]) {
 		for (const route of routes) {
 			this.logger.log(`[${route.method}] ${route.path}`)
 			const handler = route.func.bind(this);
