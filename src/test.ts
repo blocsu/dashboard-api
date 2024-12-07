@@ -1,16 +1,16 @@
 // function Component(id: number) {
 // 	console.log('init Component');
 // 	return (target: Function) => {
-// 		console.log('run Component');		
+// 		console.log('run Component');
 // 		target.prototype.id = id;
-// 	}	
+// 	}
 // }
 
 // function Logger() {
 // 	console.log('init Logger');
 // 	return (target: Function) => {
 // 		console.log('run Logger');
-// 	}	
+// 	}
 // }
 
 // function method(
@@ -22,7 +22,7 @@
 // 	const oldValue = propertyDescriptor.value;
 // 	propertyDescriptor.value = function (...args: any[]) {
 // 		return args[0] * 10;
-// 	}	
+// 	}
 // }
 
 // function Prop(
@@ -52,7 +52,7 @@
 // 	propertyKey: string,
 // 	index: number
 // ) {
-// 	console.log(propertyKey, index);	
+// 	console.log(propertyKey, index);
 // }
 
 // @Logger()
@@ -70,7 +70,6 @@
 // console.log(new User().id);
 // console.log(new User().updateId(2));
 
-
 // //=================Test_2_070 Metadata Reflection =====================
 // import 'reflect-metadata';
 
@@ -78,7 +77,7 @@
 // 	return (target: Function) => {
 // 		Reflect.defineMetadata(key, 1, target);
 // 		const meta = Reflect.getMetadata(key, target);
-// 		console.log(meta);	
+// 		console.log(meta);
 // 	}
 // }
 
@@ -86,7 +85,7 @@
 // 	return (target: Function) => {
 // 		Reflect.defineMetadata(key, 1, target);
 // 		const meta = Reflect.getMetadata(key, target);
-// 		console.log(meta);	
+// 		console.log(meta);
 // 	}
 // }
 
@@ -103,3 +102,5 @@
 // export class D {
 // 	constructor(@Inject('C') c: C) {}
 // }
+
+//npm i -D eslint @typescript-eslint/parser @typescript-eslint/eslint-plugin prettier eslint-config-prettier eslint-plugin-prettier
