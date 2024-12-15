@@ -10,7 +10,7 @@
 		"generate": "prisma generate",
 		"lint": "eslint ./src/**",
 		"test": "jest",
-		"test:e2e": "jest --config jest.e2e.config.ts",
+		"test:e2e": "jest --config jest.e2e.config.ts --coverage",
 		"lint:fix": "eslint ./src/** --fix",
 		"build": "tsc"
 	},
